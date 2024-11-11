@@ -42,6 +42,7 @@ const Navbar = () => {
             <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"logIn"}>LogIn</NavLink>
             <NavLink to={"register"}>Register</NavLink>
+            <NavLink to={"orders"}>My Orders</NavLink>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -52,6 +53,13 @@ const Navbar = () => {
             <NavLink className={({isActive})=> `${isActive ? "bg-fuchsia-600 text-white px-4 py-2 rounded-lg": "hover:text-fuchsia-600 px-4 py-2"}`} to={"logIn"}>LogIn</NavLink>
 
             <NavLink className={({isActive})=> `${isActive ? "bg-fuchsia-600 text-white px-4 py-2 rounded-lg": "hover:text-fuchsia-600 px-4 py-2"}`} to={"register"}>Register</NavLink>
+            {
+              user && <NavLink className={({isActive})=> `${isActive ? "bg-fuchsia-600 text-white px-4 py-2 rounded-lg": "hover:text-fuchsia-600 px-4 py-2"}`} to={"orders"}>My Orders</NavLink>
+            }
+            {
+              user && <NavLink className={({isActive})=> `${isActive ? "bg-fuchsia-600 text-white px-4 py-2 rounded-lg": "hover:text-fuchsia-600 px-4 py-2"}`} to={"profile"}>Profile</NavLink>
+            }
+
 
         </ul>
       </div>
